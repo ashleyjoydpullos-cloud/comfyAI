@@ -35,8 +35,11 @@ class HomeScreen extends StatelessWidget {
                             colors: [AppColors.primary, AppColors.accent],
                           ),
                         ),
-                        child: const Icon(Icons.favorite_rounded,
-                            color: Colors.white, size: 44),
+                        child: const Icon(
+                          Icons.favorite_rounded,
+                          color: Colors.white,
+                          size: 44,
+                        ),
                       ),
                       const SizedBox(height: 24),
                       const Text(
@@ -58,24 +61,35 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 40),
+
                       AppButton(
                         label: 'Log in',
                         onPressed: () =>
                             Navigator.pushNamed(context, AppRoutes.login),
                       ),
                       const SizedBox(height: 12),
+
                       AppButton(
                         label: 'Create account',
                         outlined: true,
                         onPressed: () =>
                             Navigator.pushNamed(context, AppRoutes.register),
                       ),
+                      const SizedBox(height: 12),
+
+                      AppButton(
+                        label: 'Open Report Form',
+                        outlined: true,
+                        onPressed: () =>
+                            Navigator.pushNamed(context, AppRoutes.report),
+                      ),
                       const SizedBox(height: 8),
+
                       TextButton(
                         onPressed: () => Navigator.pushNamed(
                           context,
                           AppRoutes.chat,
-                          arguments: true, // guest mode
+                          arguments: true,
                         ),
                         child: const Text('Continue as guest'),
                       ),
